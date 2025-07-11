@@ -3,6 +3,7 @@ img.displayed {
   display: block;
   margin: 0 auto; 
 }
+
 .border {
   border-width: 1px;
   border-color: #778899;  /* dark grayish blue */
@@ -41,7 +42,7 @@ a:hover {
 }
 a[href]:hover {
   text-decoration: underline; 
-  text-decoration-color: 0000ff;
+  text-decoration-color: #0000ff;
 }
 
 div {
@@ -81,7 +82,7 @@ h6 {
 
 details {
   font: 10px Inter, sans-serif, Bahnschrift, Calibri;
-  width: 65%;
+  display: inline-block;
 }
 details > summary {
   width: 12em;
@@ -140,6 +141,7 @@ pre > code {
   word-wrap: normal;
 }
 pre {
+  display: inline-block;
   font: normal normal 10px/12px consolas,Courier,Monospace;
   background-color: #eee;
   overflow: auto;
@@ -171,6 +173,7 @@ pre .cl {
   clear: both;
 }
 pre {
+  display: inline-block;
   overflow: auto;
 }
 pre[href]:hover  {
