@@ -3583,6 +3583,197 @@ body{
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex40">40. Table of Contents Template</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>Table of Contents plugin for Bootstrap</h3>
+<p>This Bootstrap plugin allows you to generate a table of contents for any page, based on the heading elements (<h1>, <h2>, etc.). It is meant to emulate the sidebar you see on the Bootstrap v3 documentation site.</p>
+
+<p>This page is an example of the plugin in action – the table of contents you see on the left (or top, on mobile) was automatically generated, without having to manually keep all of the navigation items in sync with the headings.</p>
+
+<p>IDs are created on the heading elements if they aren’t already present. Unicode characters are supported. While IDs are added for developer convenience, you’ll want to do this on the backend / through your static site generator so that your users can link to the anchors via URL fragments.</p>
+
+<h4>Usage</h4>
+
+<ol type="1">
+  <li>Set up jQuery</li>
+  <li>Set up Bootstrap v4 or Bootstrap v5</li>
+    <ul>
+	  <li>For Bootstrap v3, see the older instructions.</li>
+	</ul>
+  </li>
+  <li>Include the Bootstrap Table of Contents stylesheet and JavaScript file. Unminified versions are also available.</li>
+</ol>
+
+<pre>
+&lt;!-- add after bootstrap.min.css --&gt;
+&lt;link
+  rel="stylesheet"
+  href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+/&gt;
+&lt;!-- add after bootstrap.min.js or bootstrap.bundle.min.js --&gt;
+&lt;script src=
+"https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"&gt;&lt;/script&gt;
+</pre>
+
+<ol type=1" start="4">
+  <li>Pick one of the two options below.</li>
+  <li>Determine the layout.</li>
+</ol>
+
+<h4>Via data attributes</h4>
+
+<p><i>Simplest.</i></p>
+
+<p>Create a <nav> element with a data-toggle="toc" attribute.</p>
+
+<pre>&lt;nav id="toc" data-toggle="toc"&gt;&lt;/nav&gt;&lt;/pre&gt;
+
+<p>You can put this wherever on the page you like. Since this plugin leverages Bootstrap’s Scrollspy plugin, you will also need to add a couple attributes to the <body>:</p>
+
+<p>Bootstrap v4 Scrollspy</p>
+
+<pre>&lt;body data-spy="scroll" data-target="#toc"&gt;&lt;/body&gt;&lt;/pre&gt;
+
+<p>Bootstrap v5 Scrollspy</p>
+
+<pre>&lt;body data-bs-spy="scroll" data-bs-target="#toc"&gt;&lt;/body&gt;</pre>
+
+<h3>Via JavaScript</h3>
+<p><i>If you need customization.</i></p>
+
+<p>If you prefer to create your navigation element another way (e.g. within single-page apps), you can pass a jQuery object into Toc.init().</p>
+
+<pre>
+&lt;nav id="toc"&gt;&lt;/nav&gt;
+$(function () {
+  var navSelector = "#toc";
+  var $myNav = $(navSelector);
+  Toc.init($myNav);
+  $("body").scrollspy({
+    target: navSelector,
+  });
+});
+</pre>
+<p>See the <a href="">Scrollspy</a> documentation for more information about initializing that plugin.</p>
+
+<h4>Options</h4>
+<p>When calling Toc.init(), you can either pass in the jQuery object for the <nav> element (as seen above), or an options object:</p>
+<pre>
+Toc.init({
+  $nav: $("#myNav"),
+  // ...
+});
+</pre>
+<p>All options are optional, unless otherwise indicated.</p>
+<table>
+  <thead>
+  <tr>
+    <td>option</td>
+    <td>type</td>
+	<td>notes</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>$nav</td>
+    <td>jQuery Object<//td>
+	<td>(required) The element that the navigation will be created in.</td>
+  </tr>
+  <tr>
+    <td>$scope</td>
+	<td>jQuery Object</td>
+	<td>The element where the search for headings will be limited to, or the list of headings that will be used in the navigation. Defaults to $(document.body).</td>
+  </tr>
+  </tbody>
+</table>
+<h3>Customization</h3>
+<h4>Headings</h4>
+<p>By default, the plugin chooses the top-level navigation items by searching for headings at the first heading level, then works its way down (<h1>, then <h2>, etc.) It will stop when it finds the first set of headings where more than one exists at that level. For example:</p>
+<pre>
+&lt;h1&gt;The title&lt;/h1&gt;
+&lt;h2&gt;Some sub-title&lt;/h2&gt;
+...
+&lt;h3&gt;Section 1&lt;/h3&gt;
+&lt;h4&gt;Subsection A&lt;/h4&gt;
+...
+&lt;h4&gt;Subsection B&lt;/h4&gt;
+...
+&lt;h3&gt;Section 2&lt;/h3&gt;
+</pre>
+<p>The plugin would see there’s only one <h1>, then that there’s only one <h2>, then stop when it sees there’s more than one <h3>. The identified level becomes the top-level navigation items in the Table of Contents, and any headings under those (the <h4>s in this case) would be the second-level navigation.</p>
+
+<p>This behavior can be customized with the $scope option. That jQuery object can be created with one or more selectors to force certain headings to be used.</p>
+
+<p>In the above example, let’s say that you wanted the navigation to only contain the Subsections. You could pass:</p>
+<pre>
+Toc.init({
+  $scope: $("h4"),
+  // ...
+});
+</pre>
+<p>and the resulting Table of Contents would only contain:</p>
+<ul>
+  <li>Subsection A</li>
+  <li>Subsection B</li>
+</ul>
+<h4>Displayed text</h4>
+<p>By default, Bootstrap TOC will use the text from the heading element in the table of contents. If you want to customize what is displayed, add a data-toc-text attribute to the heading with the desired text.
+For example:</p>
+
+<pre><h2 data-toc-text="Short text">Longer text</h2></pre>
+
+<p>displays “Longer text” as the heading, but “Short text” in the sidebar.</p>
+
+<h4>Skipping</h4>
+<p>To prevent a particular heading from being added to the table of contents, add a data-toc-skip boolean attribute to the heading.</p>
+
+<p><h2 data-toc-skip>Some heading you don't want in the nav</h2></p>
+<h4>Layout</h4>
+<p>This plugin isn’t opinionated about where it should be placed on the page, but a common use case is to have the table of contents created as a “sticky” sidebar.</p>
+
+<pre>
+&lt;body data-spy="scroll" data-target="#toc"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+      &lt;!-- sidebar, which will move to the top on a small screen --&gt;
+      &lt;div class="col-sm-3"&gt;
+        &lt;nav id="toc" data-toggle="toc" class="sticky-top"&gt;&lt;/nav&gt;
+      &lt;/div&gt;
+      &lt;!-- main content area --&gt;
+      &lt;div class="col-sm-9"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+</pre>
+
+<p>You may also want to include this in your stylesheet:</p>
+<pre>
+nav[data-toggle="toc"] {
+  top: 42px;
+}
+
+/* small screens */
+@media (max-width: 768px) {
+  /* override stickyness so that the navigation does not follow scrolling */
+  nav[data-toggle="toc"] {
+    margin-bottom: 42px;
+    position: static;
+  }
+
+  /* PICK ONE */
+  /* don't expand nested items, which pushes down the rest of the page when navigating */
+  nav[data-toggle="toc"] .nav .active .nav {
+    display: none;
+  }
+  /* alternatively, if you *do* want the second-level navigation to be shown (as seen on this page on mobile), use this */
+  /*
+  nav[data-toggle='toc'] .nav .nav {
+    display: block;
+  }
+  */
+}
+</pre>
+
+<p>Note: if you’re upgrading from version <= 0.4.1 to 1.0.0+, these have changed.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex41">41. Bootstrap Templates</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex42">42. Login Form Template</h2>
