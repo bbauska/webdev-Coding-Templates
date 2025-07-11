@@ -3584,14 +3584,16 @@ body{
 <h2 id="ex40">40. Table of Contents Template</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Table of Contents plugin for Bootstrap</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This Bootstrap plugin allows you to generate a table of contents for any page, based on the heading elements (<h1>, <h2>, etc.). It is meant to emulate the sidebar you see on the Bootstrap v3 documentation site.</p>
 
 <p>This page is an example of the plugin in action – the table of contents you see on the left (or top, on mobile) was automatically generated, without having to manually keep all of the navigation items in sync with the headings.</p>
 
 <p>IDs are created on the heading elements if they aren’t already present. Unicode characters are supported. While IDs are added for developer convenience, you’ll want to do this on the backend / through your static site generator so that your users can link to the anchors via URL fragments.</p>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Usage</h4>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <ol type="1">
   <li>Set up jQuery</li>
   <li>Set up Bootstrap v4 or Bootstrap v5</li>
@@ -3617,9 +3619,9 @@ body{
   <li>Pick one of the two options below.</li>
   <li>Determine the layout.</li>
 </ol>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Via data attributes</h4>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p><i>Simplest.</i></p>
 
 <p>Create a <nav> element with a data-toggle="toc" attribute.</p>
@@ -3635,8 +3637,9 @@ body{
 <p>Bootstrap v5 Scrollspy</p>
 
 <pre>&lt;body data-bs-spy="scroll" data-bs-target="#toc"&gt;&lt;/body&gt;</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Via JavaScript</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p><i>If you need customization.</i></p>
 
 <p>If you prefer to create your navigation element another way (e.g. within single-page apps), you can pass a jQuery object into Toc.init().</p>
@@ -3653,8 +3656,9 @@ $(function () {
 });
 </pre>
 <p>See the <a href="">Scrollspy</a> documentation for more information about initializing that plugin.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Options</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>When calling Toc.init(), you can either pass in the jQuery object for the <nav> element (as seen above), or an options object:</p>
 <pre>
 Toc.init({
@@ -3684,9 +3688,13 @@ Toc.init({
   </tr>
   </tbody>
 </table>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Customization</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Headings</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>By default, the plugin chooses the top-level navigation items by searching for headings at the first heading level, then works its way down (<h1>, then <h2>, etc.) It will stop when it finds the first set of headings where more than one exists at that level. For example:</p>
+
 <pre>
 &lt;h1&gt;The title&lt;/h1&gt;
 &lt;h2&gt;Some sub-title&lt;/h2&gt;
@@ -3698,6 +3706,7 @@ Toc.init({
 ...
 &lt;h3&gt;Section 2&lt;/h3&gt;
 </pre>
+
 <p>The plugin would see there’s only one <h1>, then that there’s only one <h2>, then stop when it sees there’s more than one <h3>. The identified level becomes the top-level navigation items in the Table of Contents, and any headings under those (the <h4>s in this case) would be the second-level navigation.</p>
 
 <p>This behavior can be customized with the $scope option. That jQuery object can be created with one or more selectors to force certain headings to be used.</p>
@@ -3714,19 +3723,24 @@ Toc.init({
   <li>Subsection A</li>
   <li>Subsection B</li>
 </ul>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Displayed text</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>By default, Bootstrap TOC will use the text from the heading element in the table of contents. If you want to customize what is displayed, add a data-toc-text attribute to the heading with the desired text.
 For example:</p>
 
-<pre><h2 data-toc-text="Short text">Longer text</h2></pre>
+<pre>&lt;h2 data-toc-text="Short text"&gt;Longer text&lt;/h2&gt;</pre>
 
 <p>displays “Longer text” as the heading, but “Short text” in the sidebar.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Skipping</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To prevent a particular heading from being added to the table of contents, add a data-toc-skip boolean attribute to the heading.</p>
 
 <p><h2 data-toc-skip>Some heading you don't want in the nav</h2></p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Layout</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This plugin isn’t opinionated about where it should be placed on the page, but a common use case is to have the table of contents created as a “sticky” sidebar.</p>
 
 <pre>
@@ -3745,6 +3759,7 @@ For example:</p>
 </pre>
 
 <p>You may also want to include this in your stylesheet:</p>
+
 <pre>
 nav[data-toggle="toc"] {
   top: 42px;
@@ -3779,5 +3794,7 @@ nav[data-toggle="toc"] {
 <h2 id="ex42">42. Login Form Template</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <script src="js/lineNumbers.js"></script>
+
 </body>
+
 </html>
