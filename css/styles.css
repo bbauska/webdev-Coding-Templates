@@ -173,14 +173,14 @@ pre .cl {
   clear: both;
 }
 pre {
-  width: 400px;
+  width: 450px;
   overflow: auto;
 }
 pre[href]:hover  {
   text-decoration: none;
 }
 pre:hover, pre:focus {
-  width: 400px;  /* last: 50%, was: fit-content; before that; width: min-content */
+  width: 450px;  /* last: 50%, was: fit-content; before that; width: min-content */
 }
 @media all and (max-width: 500px) {
   img.frame { 
