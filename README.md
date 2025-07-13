@@ -69,7 +69,7 @@ optimized site, you're encouraged to do so.</p>
 <h3><a href="#ex39">39. GitHub Skeleton Template</h3>
 <ul>
   <h4><li><a href="#ex39-1">39.1 Skeleton is a simple, responsive boilerplate to kickstart any 
-    responsive project</a></h4></li>
+    responsive project</a></li></h4>
 </ul>
 <h3><a href="#ex40">40. Table of Contents Template</a></h3>
 <h3><a href="#ex41">41. Bootstrap Templates</a></h3>
@@ -537,7 +537,7 @@ box-sizing: border-box;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 ```
-<button class="third">Hover over me</button>
+&lt;button class="third"&gt;Hover over me</button>
 ```
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -592,7 +592,7 @@ box-sizing: border-box;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center">
 <img src="./images/image011.png" 
-  title=""
+  title="image001.png"
   alt="."
   style="border: 2px solid #000000; width:6.5in; height:1.7in;" />
 </p>
