@@ -82,10 +82,10 @@ h6 {
 
 details {
   font: 14px Bahnschrift, Inter, sans-serif, Calibri;
-  width: 100px;  /* 65%; */
+  width: 12em;  /* 100px; then 65%; */
 }
 details > summary {
-  width: 400px;  /* 12em; */
+  width: 12em;  /* 12em; */
   padding: 2px 6px;
   background-color: #eee;  /* very light gray */
   border: none;
@@ -173,7 +173,7 @@ pre .cl {
   clear: both;
 }
 pre {
-  width: 450px;
+  width: 475px;  /* 450px; */
   overflow: auto;
 }
 pre[href]:hover  {
