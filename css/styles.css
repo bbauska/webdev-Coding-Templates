@@ -82,7 +82,7 @@ h6 {
 
 details {
   font: 14px Bahnschrift, Inter, sans-serif, Calibri;
-  width: 65%;
+  width: 100px;  /* 65%; */
 }
 details > summary {
   width: 400px;  /* 12em; */
@@ -112,7 +112,7 @@ body {
   background-color: #eee;  /* very light gray */
   color: #000;  /* black */
   text-align: left;
-  padding: 10px;
+  padding: 5px;  /* 10px; */
   margin: 15px;  /* was margin-left: 10px; */
 }
 
