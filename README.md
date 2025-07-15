@@ -1330,7 +1330,7 @@ body {
 <img src="./images/image018.png" 
   title="Example 18: Right tooltip"
   alt="Example 18: Right tooltip."
-  style="border: 2px solid #000000; width:4.0in; height:1.0in;" />
+  style="border: 2px solid #000000; width:4.0in; height:1.4in;" />
 </p>
 <!-- ![](./images/image018.png){width="4.0625in" height="1.03125in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
