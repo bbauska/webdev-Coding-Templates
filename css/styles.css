@@ -36,13 +36,13 @@ a:visited {
   text-decoration: none;
 }
 a:hover {
-  color: #00000;
-  background-color: #ffff00;  /* yellow */
+  color: #00000;  /* black */
+  background-color: #ffff00;  /* pure (or mostly pure) yellow */
   text-decoration: underline;
 }
 a[href]:hover {
   text-decoration: underline; 
-  text-decoration-color: #0000ff;
+  text-decoration-color: #0000ff;  /* pure (or mostly pure) blue */
 }
 
 div {
@@ -82,10 +82,10 @@ h6 {
 
 details {
   font: 14px Bahnschrift, Inter, sans-serif, Calibri;
-  width: 12em;  /* 100px; then 65%; */
+  width: 13em;  /* 100px; then 65%; */
 }
 details > summary {
-  width: 12em;  /* 12em; */
+  width: 13em;  /* 12em; */
   padding: 2px 6px;
   background-color: #eee;  /* very light gray */
   border: none;
@@ -101,7 +101,7 @@ details > p {
   box-shadow: 3px 3px 4px #00008b;  /* dark blue*/
 }
 details[open] > summary {
-  background-color: yellow;
+  background-color: #ffff00;  /* pure (or mostly pure) yellow */
 }
 
 background: linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%)
@@ -173,15 +173,16 @@ pre .cl {
   clear: both;
 }
 pre {
-  width: 475px;  /* 450px; */
+  width: 485px;  /* 450px; */
   overflow: auto;
 }
 pre[href]:hover  {
   text-decoration: none;
 }
 pre:hover, pre:focus {
-  width: 450px;  /* last: 50%, was: fit-content; before that; width: min-content */
+  width: 485px;  /* last: 50%, was: fit-content; before that; width: min-content */
 }
+
 @media all and (max-width: 500px) {
   img.frame { 
     border-width: 0px;
