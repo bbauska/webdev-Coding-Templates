@@ -1290,11 +1290,13 @@ textarea {
   &lt;img onclick="openModal(3)" id="image3" /&gt;
 &lt;/div&gt;
 &lt;div id="lightbox" class="lightbox"&gt;
-&lt;button onclick="closeModal()" class="close-btn"&gt;</pre>
+&lt;button onclick="closeModal()" class="close-btn"&gt;
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Close</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<pre>  &lt;/button&gt;
+<pre>
+  &lt;/button&gt;
   &lt;div class="image-preview"&gt;
     &lt;img id="preview-image" /&gt;
   &lt;/div&gt;
@@ -1310,14 +1312,16 @@ textarea {
     &lt;img onclick="openModal(2)" id="l-image2" /&gt;
     &lt;img onclick="openModal(3)" id="l-image3" /&gt;
   &lt;/div&gt;
-&lt;/div&gt;</pre>
+&lt;/div&gt;
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>The CSS</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <details>
   <summary>CSS code extract!</summary>
 
-<pre>* {
+<pre
+* {
   box-sizing: border-box;
 }
 .images {
@@ -1391,7 +1395,8 @@ textarea {
 .lightbox__images img.active {
   width: 100%;
   opacity: 1;
-}</pre>
+}
+</pre>
 
 </details>
 
@@ -1400,7 +1405,8 @@ textarea {
 <details>
   <summary>JS code extract!</summary>
 
-<pre>const IMAGE0 =
+<pre>
+const IMAGE0 =
 "https://i.picsum.photos/id/229/400/200.jpg?hmac=ULnwo8IFtjR3PshWPNEvFWNU8Xwl_OIeUtVmZIQanhU"
 const IMAGE1 =
 "https://i.picsum.photos/id/154/400/200.jpg?hmac=uhKcJIPoFcq2xMC16yvZAwA8sTeIbThUr-Njq0DkhSU"
@@ -1463,7 +1469,8 @@ function control(direction) {
   previewImg.src = images[activeId]
   modalImages[activeId].classList.add("active")
   modalImages[prevId].classList.remove("active")
-}</pre>
+}
+</pre>
 
 </details>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1487,7 +1494,8 @@ function control(direction) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>The CSS</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<pre>.first {
+<pre>
+.first {
   border-radius: 0;
   border: 2px solid purple;
   height: 30px;
@@ -1498,7 +1506,8 @@ function control(direction) {
 }
 .first::-webkit-progress-value {
   background-color: purple;
-}</pre>
+}
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex07b">Example #7b: Progress bar: rainbow</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1533,7 +1542,8 @@ function control(direction) {
 <details>
   <summary>CSS code extract!</summary>
 
-<pre>.second {
+<pre>
+.second {
   overflow: hidden;
   border-radius: 15px;
   height: 30px;
@@ -1553,7 +1563,8 @@ function control(direction) {
     rgb(85, 255, 0) 100px
   );
   border-radius: 15px;
-}</pre>
+}
+</pre>
 
 </details>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1566,7 +1577,8 @@ function control(direction) {
 <details>
   <summary>HTML code extract!</summary>
 
-<pre>&lt;!DOCTYPE html&gt;
+<pre>
+&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;title&gt;Document&lt;/title&gt;
@@ -1609,7 +1621,8 @@ function control(direction) {
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;/body&gt;
-&lt;/html&gt;</pre>
+&lt;/html&gt;
+</pre>
 
 </details>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1618,7 +1631,8 @@ function control(direction) {
 <details>
   <summary>CSS code extract!</summary>
 
-<pre>@import
+<pre>
+@import
 "https://fonts.googleapis.com/css?family=Montserrat:400,700&vert;Raleway:300,400";
 body {
   color: #2c3e50;
@@ -1699,7 +1713,8 @@ input:checked + .tab-label::after {
 input:checked ~ .tab-content {
   max-height: 100vh;
   padding: 1rem;
-}</pre>
+}
+</pre>
 
 </details>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1710,7 +1725,8 @@ input:checked ~ .tab-content {
 <details>
   <summary>HTML code extract!</summary>
 
-<pre>&lt;!DOCTYPE html&gt;
+<pre>
+&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;title&gt;Document&lt;/title&gt;
@@ -1754,7 +1770,8 @@ input:checked ~ .tab-content {
   &lt;/div&gt;
   &lt;script src="index.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
-&lt;/html&gt;</pre>
+&lt;/html&gt;
+</pre>
 
 </details>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1763,7 +1780,8 @@ input:checked ~ .tab-content {
 <details>
   <summary>CSS code extract!</summary>
 
-<pre>@import
+<pre>
+@import
 "https://fonts.googleapis.com/css?family=Montserrat:400,700&vert;Raleway:300,400";
 body {
   color: #2c3e50;
@@ -1838,19 +1856,22 @@ input {
 .open-tab .tab-content {
   max-height: 100vh;
   padding: 1rem;
-}</pre>
+}
+</pre>
 
 </details>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>The JavaScript</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<pre>const accordions = document.getElementsByClassName("tab");
+<pre>
+const accordions = document.getElementsByClassName("tab");
   for (const accordion of accordions) {
     accordion.addEventListener("click", function (e) {
       e.preventDefault();
       accordion.classList.toggle("open-tab");
     });
-  }</pre>
+  }
+  </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>4 CSS Effects Templates</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1861,7 +1882,8 @@ input {
 <details>
   <summary>HTML code extract!</summary>
 
-<pre>&lt;!DOCTYPE html&gt;
+<pre>
+&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;link rel="stylesheet" href="style.css" /&gt;
@@ -1877,7 +1899,8 @@ input {
       &lt;/div&gt;
     &lt;/div&gt;
 &lt;/body&gt;
-&lt;/html&gt;</pre>
+&lt;/html&gt;
+</pre>
 
 </details>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1886,7 +1909,8 @@ input {
 <details>
   <summary>CSS code extract!</summary>
 
-<pre>*,
+<pre>
+*,
 *::after,
 *::before {
   margin: 0;
@@ -1917,7 +1941,8 @@ input {
 }
 .translucent {
   filter: opacity(35%);
-}</pre>
+}
+</pre>
 
 </details>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1928,7 +1953,8 @@ input {
 <details>
   <summary>HTML code extract!</summary>
 
-<pre>&lt;!DOCTYPE html&gt;
+<pre>
+&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;link rel="stylesheet" href="style.css" /&gt;
@@ -1944,7 +1970,8 @@ input {
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/body&gt;
-&lt;/html&gt;</pre>
+&lt;/html&gt;
+</pre>
 
 </details>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1953,7 +1980,8 @@ input {
 <details>
   <summary>CSS code extract!</summary>
 
-<pre>*,
+<pre>
+*,
 *::after,
 *::before {
   margin: 0;
@@ -1984,7 +2012,8 @@ input {
 }
 .black-white {
   filter: grayscale(100%);
-}</pre>
+}
+</pre>
 
 </details>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1993,7 +2022,8 @@ input {
 <details>
   <summary>HTML code extract!</summary>
 
-<pre>&lt;!DOCTYPE html&gt;
+<pre>
+&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;link rel="stylesheet" href="style.css" /&gt;
@@ -2009,7 +2039,8 @@ input {
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/body&gt;
-&lt;/html&gt;</pre>
+&lt;/html&gt;
+</pre>
 
 </details>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2018,7 +2049,8 @@ input {
 <details>
   <summary>CSS code extract!</summary>
 
-<pre>*,
+<pre>
+*,
 *::after,
 *::before {
   margin: 0;
@@ -2049,7 +2081,8 @@ input {
 }
 .nineties-effect {
   filter: sepia(100%);
-}</pre>
+}
+</pre>
 
 </details>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2060,7 +2093,8 @@ input {
 <details>
   <summary>HTML code extract!</summary>
 
-<pre>&lt;!DOCTYPE html&gt;
+<pre>
+&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;link rel="stylesheet" href="style.css" /&gt;
@@ -2076,7 +2110,8 @@ input {
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/body&gt;
-&lt;/html&gt;</pre>
+&lt;/html&gt;
+</pre>
 
 </details>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2085,7 +2120,8 @@ input {
 <details>
   <summary>CSS code extract!</summary>
 
-<pre>*,
+<pre>
+*,
 *::after,
 *::before {
   margin: 0;
@@ -2130,7 +2166,8 @@ input {
 <details>
   <summary>HTML code extract!</summary>
 
-<pre>&lt;!DOCTYPE html&gt;
+<pre>
+&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;title&gt;Document&lt;/title&gt;
@@ -2159,7 +2196,8 @@ input {
   &lt;/div&gt;
   &lt;script src="index.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
-&lt;/html&gt;</pre>
+&lt;/html&gt;
+</pre>
 
 </details>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2168,7 +2206,8 @@ input {
 <details>
   <summary>CSS code extract!</summary>
 
-<pre>@import
+<pre>
+@import
 url("https://fonts.googleapis.com/css2?family=DynaPuff&display=swap");
 * {
   padding: 0;
@@ -2229,7 +2268,8 @@ body {
   text-align: center;
   color: #fafafa;
   font-size: 3.5rem;
-}</pre>
+}
+</pre>
 
 </details>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2238,7 +2278,8 @@ body {
 <details>
   <summary>CSS code extract!</summary>
 
-<pre>const buttons = document.querySelectorAll(".btn");
+<pre>
+const buttons = document.querySelectorAll(".btn");
 const cities = document.querySelectorAll(".city");
 function showCity(e, index) {
   // adds the hidden-city class to all image element and removes the
@@ -2256,7 +2297,8 @@ buttons.forEach((button, index) =&gt; {
   button.addEventListener("click", (e) =&gt; {
     showCity(e, index);
   });
-});</pre>
+});
+</pre>
 
 </details>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2267,7 +2309,8 @@ buttons.forEach((button, index) =&gt; {
 <details>
   <summary>HTML code extract!</summary>
 
-<pre>&lt;!DOCTYPE html&gt;
+<pre>
+&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;title&gt;Document&lt;/title&gt;
@@ -2331,7 +2374,8 @@ buttons.forEach((button, index) =&gt; {
   &lt;/div&gt;
   &lt;script src="index.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
-&lt;/html&gt;</pre>
+&lt;/html&gt;
+</pre>
 
 </details>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2340,7 +2384,8 @@ buttons.forEach((button, index) =&gt; {
 <details>
   <summary>CSS code extract!</summary>
 
-<pre>@import
+<pre>
+@import
 "https://fonts.googleapis.com/css?family=Montserrat:400,700&vert;Raleway:300,400";
 * {
   padding: 0;
@@ -2444,7 +2489,8 @@ h2 {
     opacity: 1;
     transform: translateY(0%);
   }
-}</pre>
+}
+</pre>
 
 </details>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2453,7 +2499,8 @@ h2 {
 <details>
   <summary>JS code extract!</summary>
 
-<pre>const buttons = document.querySelectorAll(".btn");
+<pre>
+const buttons = document.querySelectorAll(".btn");
 const cards = document.querySelectorAll(".card");
 function showCard(e, index) {
   // adds the hidden-city class to all city element and removes the
@@ -2473,7 +2520,8 @@ buttons.forEach((button, index) =&gt; {
   button.addEventListener("click", (e) =&gt; {
     showCard(e, index);
   });
-});</pre>
+});
+</pre>
 
 </details>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2486,7 +2534,8 @@ buttons.forEach((button, index) =&gt; {
 <details>
   <summary>HTML code extract!</summary>
 
-<pre>&lt;!DOCTYPE html&gt;
+<pre>
+&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;link rel="stylesheet" href="style.css" /&gt;
@@ -2520,7 +2569,8 @@ buttons.forEach((button, index) =&gt; {
 &lt;/div&gt;
 &lt;/body&gt;
 &lt;script src="index.js"&gt;&lt;/script&gt;
-&lt;/html&gt;</pre>
+&lt;/html&gt;
+</pre>
 
 </details>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2529,7 +2579,8 @@ buttons.forEach((button, index) =&gt; {
 <details>
   <summary>CSS code extract!</summary>
 
-<pre>@import
+<pre>
+@import
 url("https://fonts.googleapis.com/css2?family=DynaPuff&display=swap");
 * {
   padding: 0;
@@ -2614,7 +2665,8 @@ body {
 }
 .navigation .nav-btn:hover {
   background: white;
-}</pre>
+}
+</pre>
 
 </details>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2623,7 +2675,8 @@ body {
 <details>
   <summary>JS code extract!</summary>
 
-<pre>const prev = document.querySelector(".prev");
+<pre>
+const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
 const images = document.querySelectorAll(".card");
 const totalImages = images.length;
@@ -2651,7 +2704,8 @@ function nextImage(direction) {
     images[i].classList.add("hidden-card");
   }
     images[index].classList.remove("hidden-card");
-}</pre>
+}
+</pre>
 
 </details>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2662,7 +2716,8 @@ function nextImage(direction) {
 <details>
   <summary>CSS code extract!</summary>
 
-<pre>&lt;!DOCTYPE html&gt;
+<pre>
+&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;title&gt;Document&lt;/title&gt;
@@ -2697,7 +2752,8 @@ function nextImage(direction) {
   &lt;/div&gt;
 &lt;/body&gt;
 &lt;script src="index.js"&gt;&lt;/script&gt;
-&lt;/html&gt;</pre>
+&lt;/html&gt;
+</pre>
 
 </details>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2706,7 +2762,8 @@ function nextImage(direction) {
 <details>
   <summary>CSS code extract!</summary>
 
-<pre>@import
+<pre>
+@import
 url("https://fonts.googleapis.com/css2?family=DynaPuff&display=swap");
 * {
   padding: 0;
@@ -2791,7 +2848,8 @@ body {
 }
 .navigation .nav-btn:hover {
   background: white;
-}</pre>
+}
+</pre>
 
 </details>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
