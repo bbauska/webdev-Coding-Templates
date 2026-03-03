@@ -36,7 +36,7 @@ a:visited {
   text-decoration: none;
 }
 a:hover {
-  color: #00000;  /* black */
+  color: #000000;  /* black */
   background-color: #ffff00;  /* pure (or mostly pure) yellow */
   text-decoration: underline;
 }
@@ -87,7 +87,7 @@ details {
 details > summary {
   width: 13em;  /* 12em; */
   padding: 2px 6px;
-  background-color: #eee;  /* very light gray */
+  background-color: #eeeeee;  /* very light gray */
   border: none;
   box-shadow: 3px 3px 4px #00008b;  /* dark blue */
   cursor: pointer;
@@ -95,7 +95,7 @@ details > summary {
 }
 details > p {
   border-radius: 0 0 10px 10px;
-  background-color: #fff;  /* white */
+  background-color: #ffffff;  /* white */
   padding: 2px 6px;
   margin: 0;
   box-shadow: 3px 3px 4px #00008b;  /* dark blue*/
@@ -109,8 +109,8 @@ background: linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93
 body {
   font-family: Bahnschrift, Inter, Helvetic, sans-serif;
   font-size: 13.5px;  /* 1.2rem; */
-  background-color: #eee;  /* very light gray */
-  color: #000;  /* black */
+  background-color: #eeeeee;  /* very light gray */
+  color: #000000;  /* black */
   text-align: left;
   padding: 5px;  /* 10px; */
   margin: 15px;  /* was margin-left: 10px; */
@@ -132,12 +132,12 @@ body {
   border-radius: 1px;
 }
 #myBtn:hover {
-  background-color: #555;  /* very dark gray */
+  background-color: #555555;  /* very dark gray */
 }
 
 pre {
   font: normal normal 10px/12px consolas,Courier,Monospace;
-  background-color: #eee;  /* very light gray */
+  background-color: #eeeeee;  /* very light gray */
   overflow: auto;
   margin: 0 0 1em;
   padding: .5em 1em;
@@ -153,7 +153,7 @@ pre > code {
 pre code,
 pre .line-number {
   font: normal normal 10px/12px consolas,Courier,Monospace;
-  color: #000;  /* black */
+  color: #000000;  /* black */
   display: block;
 }
 pre .line-number {
