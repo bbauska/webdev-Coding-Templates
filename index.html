@@ -49,10 +49,10 @@
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ script function: scrollFunction() ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <script>
-  <!-- get the button -->
+  // get the 'Top' button.
   var mybutton = document.getElementById("myBtn");
 
-  <!-- when the user scrolls down 10px from the top of the document, show the "Top" button -->
+  // when the user scrolls down 10px from the top of the document, show the "Top" button.
   window.onscroll = function() {scrollFunction()};
 
   function scrollFunction() {
@@ -63,7 +63,7 @@
     }
   }
 
-  // when the user clicks on the button, scroll to the "table-of-contents" identifier near top of the document.
+  // when user clicks 'Top' button, scroll to the "table-of-contents" near top of website.
   function topFunction() {
     document.getElementById('table-of-contents').scrollIntoView();
   }
