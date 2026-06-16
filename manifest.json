@@ -1,5 +1,10 @@
 {
- "name": "App",
+ "name": "webdev Coding Templates",
+ "short_name": "webdev",
+ "start_url": "/webdev-Coding-Templates/",
+ "display": "standalone",
+ "background_color": "#ffffff",
+ "theme_color": "#007bff",
  "icons": [
   {
    "src": "\/images/android-icon-36x36.png",
